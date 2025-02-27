@@ -22,7 +22,7 @@ body {
     min-width: 280px;
     padding: 3em 1em 3em 3em;
     border-radius: 0.6em;
-    background-image: url("../../assets/bg-sidebar-desktop.svg");
+    background-image: url("../../assets/bg-sidebar-desktop.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -45,6 +45,7 @@ body {
 
 .multi-side-form .form-sidebar .step-container:focus {
     outline: 2px solid var(--Primary-Pastel-blue);
+
 }
 
 .multi-side-form .form-sidebar .step-container .step-number {
@@ -478,6 +479,10 @@ body {
     text-align: center;
 }
 
+.confirmation-section .confirmation-container .confirmation-icon img {
+    width: 100px;
+}
+
 .confirmation-section .confirmation-container .confirmation-title {
     margin-top: 34px;
     margin-bottom: 16px;
@@ -522,7 +527,7 @@ body {
     .multi-side-form .form-sidebar {
         width: 100vw;
         height: 230px;
-        background-image: url("../../assets//bg-sidebar-mobile.svg");
+        background-image: url("../../assets//bg-sidebar-mobile.webp");
         background-position: bottom 20px center;
         border-radius: 0;
     }
