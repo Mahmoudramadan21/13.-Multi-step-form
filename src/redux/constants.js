@@ -1,0 +1,6 @@
+// Action Types for Redux
+export const UPDATE_PERSONAL_INFO = "UPDATE_PERSONAL_INFO";
+export const SELECT_PLAN = "SELECT_PLAN";
+export const TOGGLE_BILLING_CYCLE = "TOGGLE_BILLING_CYCLE";
+export const TOGGLE_ADD_ON = "TOGGLE_ADD_ON";
+export const UPDATE_ACTIVE_STEP = "UPDATE_ACTIVE_STEP";

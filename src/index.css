@@ -1,0 +1,65 @@
+/* Global Variables */
+:root {
+    --Primary-Marine-blue: hsl(213, 96%, 18%);
+    --Primary-Purplish-blue: hsl(243, 100%, 62%);
+    --Primary-Pastel-blue: hsl(228, 100%, 84%);
+    --Primary-Light-blue: hsl(206, 94%, 87%);
+    --Primary-Strawberry-red: hsl(354, 84%, 57%);
+
+    --Neutral-Cool-gray: hsl(231, 11%, 63%);
+    --Neutral-Light-gray: hsl(229, 24%, 87%);
+    --Neutral-Magnolia: hsl(217, 100%, 97%);
+    --Neutral-Alabaster: hsl(231, 100%, 99%);
+    --Neutral-White: hsl(0, 0%, 100%);
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+    font-family: "Ubuntu", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Container */
+@media (min-width: 767px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}

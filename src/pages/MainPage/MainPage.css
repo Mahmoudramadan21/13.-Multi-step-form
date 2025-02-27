@@ -1,0 +1,590 @@
+/* General Styles */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Neutral-Magnolia);
+}
+
+/* Multi-step Form Container */
+.multi-side-form {
+    display: flex;
+    gap: 20px;
+    padding: 1em;
+    background-color: var(--Neutral-White);
+    border-radius: 0.6em;
+}
+
+/* Sidebar Styles */
+.multi-side-form .form-sidebar {
+    min-width: 280px;
+    padding: 3em 1em 3em 3em;
+    border-radius: 0.6em;
+    background-image: url("../../assets/bg-sidebar-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.multi-side-form .form-sidebar .step-container {
+    width: 100%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    text-align: left;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.multi-side-form .form-sidebar .step-container:focus {
+    outline: 2px solid var(--Primary-Pastel-blue);
+}
+
+.multi-side-form .form-sidebar .step-container .step-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid var(--Neutral-Light-gray);
+    color: var(--Neutral-Alabaster);
+}
+
+.multi-side-form .form-sidebar .step-container .step-number.step-number--active {
+    border: none;
+    background-color: var(--Primary-Pastel-blue);
+}
+
+.multi-side-form .form-sidebar .step-container .step-subtitle {
+    margin-bottom: 4px;
+    color: var(--Neutral-Cool-gray);
+    font-size: 15px;
+}
+
+.multi-side-form .form-sidebar .step-container .step-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 1.2px;
+}
+
+/* Form Step Styles */
+.multi-side-form .form-step,
+.confirmation-section {
+    width: 620px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 2em 4em;
+}
+
+.multi-side-form .form-step .step-title {
+    font-size: 2.4rem;
+    color: var(--Primary-Marine-blue);
+}
+
+.multi-side-form .form-step .step-description {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    color: var(--Neutral-Cool-gray);
+}
+
+.multi-side-form .form-step form {
+    width: 100%;
+}
+
+.multi-side-form .form-step .form-group {
+    width: 100%;
+}
+
+.multi-side-form .form-step .form-group .input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.multi-side-form .form-step .form-group .input-group .input-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.multi-side-form .form-step .form-group .input-group .error-message {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #aa2b2b;
+}
+
+.multi-side-form .form-step .form-group .input-group .input-label {
+    font-size: 14px;
+    color: var(--Primary-Marine-blue);
+}
+
+.multi-side-form .form-step .form-group .input-group .input-form {
+    padding: 1em;
+    border: 2px solid var(--Neutral-Cool-gray);
+    border-radius: 8px;
+    font-family: "Ubuntu", serif;
+    font-weight: 500;
+    color: var(--Primary-Marine-blue);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.multi-side-form .form-step .form-group .input-group .input-form:focus {
+    border-color: var(--Primary-Pastel-blue);
+}
+
+.multi-side-form .form-step .form-navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.multi-side-form .form-step .form-navigation>* {
+    width: 108px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.multi-side-form .form-step .btn-prev {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Neutral-Cool-gray);
+    align-self: end;
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.multi-side-form .form-step .btn-prev.hidden {
+    visibility: hidden;
+}
+
+.multi-side-form .form-step .btn-prev:hover {
+    color: var(--Primary-Marine-blue);
+}
+
+.multi-side-form .form-step .btn-next {
+    align-self: flex-end;
+    background-color: var(--Primary-Marine-blue);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.multi-side-form .form-step .btn-next:hover {
+    background-color: hsl(213, 96%, 30%);
+}
+
+.multi-side-form .form-step .btn-prev:focus,
+.multi-side-form .form-step .btn-next:focus {
+    outline: 4px solid var(--Primary-Pastel-blue);
+}
+
+.multi-side-form .form-step .confirm-btn {
+    background-color: var(--Primary-Purplish-blue);
+}
+
+.multi-side-form .form-step .confirm-btn:hover {
+    background-color: var(--Primary-Purplish-blue);
+    opacity: 0.7;
+}
+
+/* Plan Selection Styles */
+.form-step .form-group .plan-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.form-step .form-group .plan-options__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-step .form-group .plan-options__item label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 60px;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid var(--Neutral-Light-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-step .form-group .plan-options__item label:hover {
+    border-color: var(--Primary-Marine-blue);
+}
+
+.form-step .form-group .plan-options__item input {
+    display: none;
+}
+
+.form-step .form-group .plan-options__item input:checked+label {
+    border-color: var(--Primary-Marine-blue);
+    background-color: var(--Neutral-Magnolia);
+}
+
+.form-step .form-group .plan-options__item .item__icon {
+    max-width: 46px;
+}
+
+.form-step .form-group .plan-options__item .item__name {
+    font-size: 1.1rem;
+    color: var(--Primary-Marine-blue);
+    font-weight: 500;
+}
+
+.form-step .form-group .plan-options__item .item__price {
+    color: var(--Neutral-Cool-gray);
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.form-step .form-group .plan-options__item .item__offer {
+    color: var(--Primary-Marine-blue);
+}
+
+.form-step .form-group .billing-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: var(--Neutral-Magnolia);
+    border-radius: 8px;
+}
+
+.form-step .form-group .billing-toggle span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #999;
+}
+
+.form-step .form-group .billing-toggle .active {
+    color: #02295a;
+}
+
+.form-step .form-group .billing-toggle .switch {
+    position: relative;
+    width: 40px;
+    height: 20px;
+}
+
+.form-step .form-group .billing-toggle .switch input {
+    display: none;
+}
+
+.form-step .form-group .billing-toggle .switch label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #02295a;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.form-step .form-group .billing-toggle .switch label::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    background: white;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
+.form-step .form-group .billing-toggle .switch input:checked+label::after {
+    left: 22px;
+}
+
+/* Add-ons Styles */
+.form-step .addOns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-step .addOns-container .addOn-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1em 1.3em;
+    border: 1px solid var(--Neutral-Light-gray);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-step .addOns-container .addOn-card input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.form-step .addOns-container .addOn-card:hover {
+    border-color: var(--Primary-Marine-blue);
+}
+
+.form-step .addOns-container .addOn-card.addOn-selected {
+    border-color: var(--Primary-Marine-blue);
+    background-color: var(--Neutral-Magnolia);
+}
+
+.form-step .addOns-container .addOn-card .addOn-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-step .addOns-container .addOn-card .addOn-details .addOn-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--Primary-Marine-blue);
+}
+
+.form-step .addOns-container .addOn-card .addOn-details .addOn-info {
+    font-size: 0.85rem;
+    color: var(--Neutral-Gray);
+}
+
+.form-step .addOns-container .addOn-card .addOn-cost {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--Primary-Marine-blue);
+}
+
+/* Summary Section */
+.form-step .summary-container {
+    width: 100%;
+}
+
+.summary-container .subscription-details {
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+    background-color: var(--Neutral-Magnolia);
+}
+
+.form-step .summary-container .plan-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Primary-Marine-blue);
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-bottom: 24px;
+    position: relative;
+}
+
+.form-step .summary-container .plan-details::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: var(--Neutral-Light-gray);
+}
+
+.form-step .summary-container .plan-details .plan-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.form-step .summary-container .plan-details .plan-header .plan-name {
+    text-transform: capitalize;
+}
+
+.form-step .summary-container .plan-details .plan-header .plan-change {
+    text-decoration: underline;
+    color: var(--Neutral-Cool-gray);
+    font-weight: normal;
+}
+
+.form-step .summary-container .addons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    padding-top: 24px;
+}
+
+.form-step .summary-container .addons .addon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Neutral-Cool-gray);
+}
+
+.form-step .summary-container .addons .addon .addon-price {
+    color: var(--Primary-Marine-blue);
+}
+
+.form-step .total {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Neutral-Cool-gray);
+    font-size: 1.1rem;
+    padding: 1.5rem;
+}
+
+.form-step .total .total-price {
+    color: var(--Primary-Purplish-blue);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.confirmation-section .confirmation-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.confirmation-section .confirmation-container .confirmation-title {
+    margin-top: 34px;
+    margin-bottom: 16px;
+    color: var(--Primary-Marine-blue);
+    font-size: 2.4rem;
+}
+
+.confirmation-section .confirmation-container .confirmation-message {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: var(--Neutral-Cool-gray);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .multi-side-form .form-sidebar {
+        min-width: 250px;
+        padding: 1.4em;
+    }
+
+    .multi-side-form .form-step,
+    .confirmation-section {
+        width: fit-content;
+        padding: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    .multi-side-form {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .multi-side-form .form-sidebar {
+        width: 100vw;
+        height: 230px;
+        background-image: url("../../assets//bg-sidebar-mobile.svg");
+        background-position: bottom 20px center;
+        border-radius: 0;
+    }
+
+    .multi-side-form .form-sidebar ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 14px;
+    }
+
+    .multi-side-form .form-sidebar .step-container>div {
+        display: none;
+    }
+
+    .multi-side-form .form-step,
+    .confirmation-section {
+        width: 90vw;
+        height: fit-content;
+        margin-top: -138px;
+        margin-bottom: 120px;
+        border-radius: 8px;
+        background-color: var(--Neutral-White);
+    }
+
+    .multi-side-form .form-step .step-title {
+        font-size: 1.6rem;
+    }
+
+    .multi-side-form .form-step .form-navigation {
+        position: fixed;
+        width: 100vw;
+        height: 80px;
+        bottom: 0;
+        right: 0;
+        background-color: var(--Neutral-White);
+    }
+
+    .multi-side-form .form-step .form-navigation>* {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        margin-bottom: 16px;
+    }
+
+    .form-step .form-group .plan-options {
+        grid-template-columns: 1fr;
+    }
+
+    .form-step .form-group .plan-options__item label {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .form-step .addOns-container .addOn-card input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-right: 12px;
+    }
+}
